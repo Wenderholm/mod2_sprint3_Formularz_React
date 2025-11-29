@@ -1,0 +1,43 @@
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #09a97f;
+}
+.description {
+  font-size: 24px;
+  margin: 15px 0;
+  color: #f5ab44;
+}
+
+.modalOverlay {
+  color: black;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #27292b;
+  color: #eeeae3;
+  padding: 20px;
+  border-radius: 8px;
+  width: 450px;
+}
+
+.closeBtn {
+  background: #dc2626;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.list {
+  padding-left: 20px;
+}

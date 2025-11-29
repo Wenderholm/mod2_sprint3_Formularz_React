@@ -1,0 +1,126 @@
+.container {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #f0f0f0;
+  background-color: #27292b;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #09a97f;
+}
+.description {
+  font-size: 24px;
+  margin: 15px 0;
+  color: #f5ab44;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #3f4a5c;
+  border: none;
+  color: white;
+}
+.wrap {
+  display: flex;
+}
+.radioWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+/* ukrywamy natywny radio */
+.radioInput {
+  display: none;
+}
+
+/* label bez zmian */
+.radioLabel {
+  position: relative;
+  cursor: pointer;
+  padding-left: 32px; /* miejsce na kółko */
+  user-select: none;
+}
+
+/* kółko */
+.radioLabel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #797979;
+  background-color: #3f4a5c;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+/* po zaznaczeniu: wypełnienie kółka */
+.radioInput:checked + .radioLabel::before {
+  background: #4da3ff;
+  border-color: #4da3ff;
+}
+
+.checkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 5px;
+  background-color: #3f4a5c;
+  padding: 10px;
+}
+.txt_checkbox {
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ukrywamy natywny checkbox */
+.checkbox {
+  display: none;
+}
+
+/* wygląd tekstu kiedy checkbox ZAZNACZONY */
+.checkbox:checked + .divTech {
+  background: #4da3ff;
+  color: white;
+  width: 100%;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin: 0;
+}
+
+.submit {
+  background-color: #2563eb;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}

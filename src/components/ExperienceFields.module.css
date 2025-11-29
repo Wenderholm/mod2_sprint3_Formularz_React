@@ -1,0 +1,54 @@
+.container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.expBlock {
+  border-radius: 6px;
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  flex: 1;
+  padding: 8px;
+  appearance: none;
+  border: none;
+  color: #fff;
+  background-color: #3f4a5c;
+  border-radius: 4px;
+}
+
+.addBtn {
+  display: block;
+  flex-direction: column;
+  background: #0fa476;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.removeBtn {
+  flex: 1;
+  background: #dc2626;
+  color: white;
+  padding: 6px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+}
+
+.description {
+  font-size: 24px;
+  margin: 15px 0;
+  color: #f5ab44;
+}
