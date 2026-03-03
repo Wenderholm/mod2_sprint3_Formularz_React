@@ -6,6 +6,7 @@ import ExperienceFields from "./ExperienceFields";
 import styles from "./RegistrationForm.module.css";
 import MyImage from "../assets/mis.png";
 import Modal from "./Modal";
+import FormInput from "./FormInput";
 
 export default function RegistrationForm() {
   const [modalData, setModalData] = useState(null);
@@ -49,34 +50,43 @@ export default function RegistrationForm() {
       <div className={styles.container}>
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
           <p className={styles.description}>Dane osobowe</p>
-          <div className={styles.field}>
-            <input {...register("firstName")} placeholder="Imię" />
-            {errors.firstName && (
-              <p className={styles.error}>{errors.firstName.message}</p>
-            )}
-          </div>
+          {/* Rozwiazanie nr 1 - trochę wiecej kodu */}
+          {/* <FormInput
+            name="firstName"
+            placeholder="Imię"
+            register={register}
+            error={errors.firstName}
+          />
+          <FormInput
+            name="lastName"
+            placeholder="Nazwisko"
+            register={register}
+            error={errors.lastName}
+          />
+          <FormInput
+            name="email"
+            placeholder="Email"
+            register={register}
+            error={errors.email}
+          />
+          <FormInput
+            name="phone"
+            placeholder="Numer telefonu"
+            type="number"
+            register={register}
+            error={errors.phone}
+          /> */}
 
-          <div className={styles.field}>
-            <input {...register("lastName")} placeholder="Nazwisko" />
-            {errors.lastName && (
-              <p className={styles.error}>{errors.lastName.message}</p>
-            )}
-          </div>
-
-          <div className={styles.field}>
-            <input {...register("email")} placeholder="Email" />
-            {errors.email && (
-              <p className={styles.error}>{errors.email.message}</p>
-            )}
-          </div>
-
-          <div className={styles.field}>
-            <input {...register("phone")} placeholder="Numer telefonu" />
-            {errors.phone && (
-              <p className={styles.error}>{errors.phone.message}</p>
-            )}
-          </div>
-
+          {/* Rozwiązanie nr 2 - mniej kodu, ale mniej elastyczne */}
+          {["firstName", "lastName", "email", "phone"].map((field) => (
+            <FormInput
+              key={field}
+              name={field}
+              placeholder={field}
+              register={register}
+              error={errors[field]}
+            />
+          ))}
           <div>
             <p className={styles.description}>Preferencje kursu</p>
 
